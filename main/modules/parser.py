@@ -10,7 +10,7 @@ from main.inline import button1
 
 def trim_title(title: str):
     title = title.rsplit(' ', 1)[0]
-    title = title.replace("[Erai-raws] ", "")
+    title = title.replace("[SubsPlease] ", "")
     title = title.replace("Dr. Stone - New World", "Dr Stone New World")
     title = title.replace("Opus.COLORs", "Opus COLORs")
     title = title.replace("Ousama Ranking - Yuuki no Takarabako", "Ousama Ranking Yuuki no Takarabako")
@@ -18,20 +18,15 @@ def trim_title(title: str):
     title = title + ext
     return title
 
-def multi_sub(title: str):
-    subtitle = title.split()[-1] 
-    return subtitle
-
 def parse():
-    a = feedparser.parse("https://siftrss.com/f/oyebWJBqN8")
+    a = feedparser.parse("https://nyaa.si/?page=rss&u=subsplease&q=1080p")
     b = a["entries"]
-    b = b[0:1]
+    b = b[0:2]
     data = []    
 
     for i in b:
         item = {}
-        item['title'] = trim_title(i['title'])
-        item['subtitle'] = multi_sub(i['title'])
+        item['title'] = trim_title(i['title'])        
         item['size'] = i['nyaa_size']   
         item['link'] = "magnet:?xt=urn:btih:" + i['nyaa_infohash']
         data.append(item)
