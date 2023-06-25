@@ -140,13 +140,12 @@ async def start_uploading(data):
         ghostname = ghostname.replace("2nd Season", "S2")
         ghostname = ghostname.replace("3rd Season", "S3")
         
-        main = await app.send_photo(KAYO_ID,photo=img,caption=caption)
         
         os.rename(file, fpath)
         rep_id = 31729
     
         await asyncio.sleep(5)
-        sourcetext =  f"**#Encoded_File**" + "\n" + f"**‣ File Name**: `{razo}`" + "\n" + "**‣ Video**: `720p HEVC x265 10Bit`" + "\n" + "**‣ Audio**: `Japanese`" + "\n" + f"**‣ Subtitle**: `English`"
+        sourcetext =  f"**#Encoded_File**" + "\n" + f"**‣ File Name**: `{razo}`" + "\n" + "**‣ Video**: `1080p HEVC x265 10Bit`" + "\n" + "**‣ Audio**: `Japanese`" + "\n" + f"**‣ Subtitle**: `English`"
         untext = await app.send_message(
                       chat_id=KAYO_ID,
                       text=sourcetext,
