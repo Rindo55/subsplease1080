@@ -147,7 +147,7 @@ async def start_uploading(data):
         main = await app.send_photo(KAYO_ID,photo=img,caption=caption)
         
         os.rename(file, fpath)
-        rep_id = int(main.message_id)
+        rep_id = 31729
     
         await asyncio.sleep(5)
         sourcetext =  f"**#Encoded_File**" + "\n" + f"**‣ File Name**: `{razo}`" + "\n" + "**‣ Video**: `720p HEVC x265 10Bit`" + "\n" + "**‣ Audio**: `Japanese`" + "\n" + f"**‣ Subtitle**: `English`"
