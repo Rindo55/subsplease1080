@@ -119,15 +119,11 @@ async def start_uploading(data):
 
         print("Downloading --> ",name)
         await asyncio.sleep(5)
-        await status.edit(await status_text(f"Downloading {name}"),reply_markup=button1)
-
+        
         file = await downloader(msg,link,size,title)
 
         await msg.edit(f"Download Complete : {name}")
         print("Encoding --> ",name)
-
-        await status.edit(await status_text(f"Encoding {name}"),reply_markup=button1)
-
         duration = get_duration(file)
         durationx = get_durationx(file)
         filed = os.path.basename(file)
@@ -177,7 +173,6 @@ async def start_uploading(data):
   
         print("Uploading --> ",name)
 
-        await status.edit(await status_text(f"Uploading {name }"),reply_markup=button1)
         video = await upload_video(msg,fpath,id,tit,name,size,sourcetext,untext,nyaasize) 
         try:
 
