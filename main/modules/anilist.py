@@ -132,8 +132,7 @@ atext = """
 • Genre: #{}
 • Status: {}
 • Episodes: {}
-• Duration: {} mins/Ep
-• Tags: {}**
+• Duration: {} mins/Ep**
 """
 
 async def get_anilist_data(name):
@@ -252,8 +251,7 @@ async def get_anilist_data(name):
       genre,
       status,
       episodes,
-      duration,
-      tagsx
+      duration
     )
 
     if trailer != None:
