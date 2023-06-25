@@ -58,11 +58,11 @@ async def upload_video(msg: Message,file,id,tit,name,ttl,sourcetext,untext,nyaas
             thumbnail = await generate_thumbnail(id,file)
 
             filed = os.path.basename(file)
-            filed = filed.replace("[1080p Web-DL]", "[720p x265] @animxt")
+            filed = filed.replace("[1080p Web-DL]", "[1080p x265] @animxt")
             fukpath = "downloads/" + filed
             caption = f"{filed}"
-            caption = caption.replace("[720p x265] @animxt.mkv", "") 
-            gcaption=f"**{caption}**" + "\n" +  f"__({tit})__" + "\n" + "━━━━━━━━━━━━━━━━━━━" + "\n" + "✓  `720p x265 10Bit`" + "\n" + f"✓  `English ~ Sub`" + "\n" + "#Encoded #HEVC"
+            caption = caption.replace("[1080p x265] @animxt.mkv", "") 
+            gcaption=f"**{caption}**" + "\n" +  f"__({tit})__" + "\n" + "━━━━━━━━━━━━━━━━━━━" + "\n" + "✓  `1080p x265 10Bit`" + "\n" + f"✓  `English ~ Sub`" + "\n" + "#Encoded #HEVC"
             kayo_id = -1001642923224
             gay_id = 1159872623
             x = await app.send_document(
