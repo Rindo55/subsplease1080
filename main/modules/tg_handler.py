@@ -142,7 +142,7 @@ async def start_uploading(data):
         
         
         os.rename(file, fpath)
-        rep_id = 31729
+        rep_id = 32208
     
         await asyncio.sleep(5)
         sourcetext =  f"**#Encoded_File**" + "\n" + f"**‣ File Name**: `{razo}`" + "\n" + "**‣ Video**: `1080p HEVC x265 10Bit`" + "\n" + "**‣ Audio**: `Japanese`" + "\n" + f"**‣ Subtitle**: `English`"
